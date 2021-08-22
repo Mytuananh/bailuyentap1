@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai 2</title>
+</head>
+<body>
+<form>
+    <p>Số tuổi là:</p>
+    <p><input type="text" id="sotuoi" placeholder="Nhập số..."></p>
+    <p><button type="button" onclick="ketqua()">Kết quả</button> </p>
+    <p id="ket"></p>
+</form>
+<script>
+    function ketqua() {
+        let sotuoi = document.getElementById("sotuoi").value;
+        let a = parseInt(sotuoi)
+        if (a >=15 && a<=19) {
+            document.getElementById("ket").innerText = 'Đủ điều kiện vào 10'
+        } else {
+            document.getElementById("ket").innerText = 'Không đủ điều kiện vào 10'
+        }
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai6</title>
+</head>
+<body>
+<form>
+    <p>Doanh số bán được trong 1 tháng là:</p>
+    <p><input type="text" id="songuyen" placeholder="Nhập số..."></p>
+    <p><button type="button" onclick="ketqua()">Kết quả</button> </p>
+    <p id="ket"></p>
+</form>
+<script>
+    function ketqua() {
+        let songuyen = document.getElementById("songuyen").value;
+        let a = parseInt(songuyen)
+        if (a >=1000) {
+            document.getElementById("ket").innerText = 'Hoa hồng  = 16% Tổng doanh số'
+        } else if (a>=500) {
+            document.getElementById("ket").innerText = 'Hoa hồng  = 14% Tổng doanh số'
+        } else {
+            document.getElementById("ket").innerText = 'Hoa hồng  = 12% Tổng doanh số'
+        }
+    }
+</script>
+</body>
+</html>

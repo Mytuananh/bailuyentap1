@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai5</title>
+</head>
+<body>
+<form>
+<p>Số a là:</p>
+<p><input type="text" id="soa" placeholder="Nhập số..."></p>
+<p>Số b là:</p>
+<p><input type="text" id="sob" placeholder="Nhập số..."></p>
+<p>Số c là:</p>
+<p><input type="text" id="soc" placeholder="Nhập số..."></p>
+<p><button type="button" onclick="ketqua()">Kết quả</button> </p>
+<p id="ket"></p>
+</form>
+<script>
+    function ketqua() {
+        let soa = document.getElementById("soa").value;
+        let a = parseInt(soa)
+        let sob = document.getElementById("sob").value;
+        let b = parseInt(sob)
+        let soc = document.getElementById("soc").value;
+        let c = parseInt(soc)
+        let d = (a + b + c)/3
+        if (d >=8.5 && d<=10) {
+            document.getElementById("ket").innerText = 'Học lực giỏi'
+        } else if (d>=6.5){
+            document.getElementById("ket").innerText = 'Học lực khá'
+        } else if (d>=5.0){
+            document.getElementById("ket").innerText = 'Học lực Tb'
+        } else {
+            document.getElementById("ket").innerText = 'Học lực yếu'
+        }
+    }
+</script>
+</body>
+</html>

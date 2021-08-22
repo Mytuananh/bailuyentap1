@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai4</title>
+</head>
+<body>
+<form>
+  <p>Số a là:</p>
+  <p><input type="text" id="soa" placeholder="Nhập số..."></p>
+  <p>Số b là:</p>
+  <p><input type="text" id="sob" placeholder="Nhập số..."></p>
+    <p>Số c là:</p>
+    <p><input type="text" id="soc" placeholder="Nhập số..."></p>
+  <p><button type="button" onclick="ketqua()">Kết quả</button> </p>
+  <p id="ket"></p>
+</form>
+<script>
+  function ketqua() {
+    let soa = document.getElementById("soa").value;
+    let a = parseInt(soa)
+    let sob = document.getElementById("sob").value;
+    let b = parseInt(sob)
+      let soc = document.getElementById("soc").value;
+      let c = parseInt(soc)
+    if (a>b && a>c) {
+      document.getElementById("ket").innerText = 'a lớn nhất'
+    } else if (b>a && b>c){
+      document.getElementById("ket").innerText = 'b lớn nhất'
+    } else {
+        document.getElementById("ket").innerText = 'c lớn nhất'
+    }
+  }
+</script>
+</body>
+</html>

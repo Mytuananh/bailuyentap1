@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai1</title>
+</head>
+<body>
+<form>
+    <p>Số a là:</p>
+    <p><input type="text" id="soa" placeholder="Nhập số..."></p>
+    <p>Số b là:</p>
+    <p><input type="text" id="sob" placeholder="Nhập số..."></p>
+    <p><button type="button" onclick="ketqua()">Kết quả</button> </p>
+    <p id="ket"></p>
+</form>
+<script>
+    function ketqua() {
+        let soa = document.getElementById("soa").value;
+        let a = parseInt(soa)
+        let sob = document.getElementById("sob").value;
+        let b = parseInt(sob)
+        if (a%b==0) {
+            document.getElementById("ket").innerText = 'a có chia hết cho b'
+        } else {
+            document.getElementById("ket").innerText = 'a không chia hết cho b'
+        }
+    }
+</script>
+</body>
+
+</html>
